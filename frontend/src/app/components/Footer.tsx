@@ -45,6 +45,9 @@ export function Footer() {
         </div>
         <div className="border-t border-gray-800 pt-6 text-center text-sm text-gray-400">
           <p>© {new Date().getFullYear()} African Admission. All rights reserved.</p>
+          <p className="mt-2 text-gray-300">
+            African Admission is a division of <span className="text-emerald-400">VINK Group (Pty) Ltd</span>, registration number 2018/079316/07.
+          </p>
           <p className="mt-2">This is an independent platform and not affiliated with any government entity.</p>
         </div>
       </div>

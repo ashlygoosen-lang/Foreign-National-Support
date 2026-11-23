@@ -43,7 +43,7 @@ export function renderDocument(type, { user, summary, contribution }) {
         <div class="row"><span>Period</span><span>${esc(contribution.period)}</span></div>
         <div class="row"><span>Payment method</span><span>${esc(contribution.method.toUpperCase())}</span></div>
         <div class="row"><span>Confirmed</span><span>${fmtDate(contribution.paidAt || contribution.updatedAt || contribution.createdAt)}</span></div>
-      </div><div class="foot">This receipt confirms a monthly contribution received by African Admission. Keep it for your records.</div></div>`);
+      </div><div class="foot">This receipt confirms a monthly contribution received by African Admission, a division of VINK Group (Pty) Ltd (reg. 2018/079316/07). Keep it for your records.</div></div>`);
   }
   return shell('Membership Certificate', `
     <div class="doc"><div class="band"><div><h1>Membership Certificate</h1><p>Healthcare & Education Access Platform</p></div><div style="font-size:13px">${esc(user.memberNumber)}</div></div>
@@ -55,5 +55,5 @@ export function renderDocument(type, { user, summary, contribution }) {
       <div class="row"><span>Nationality</span><span>${esc(user.nationality)}</span></div>
       <div class="row"><span>Member since</span><span>${fmtDate(user.createdAt)}</span></div>
       <div class="row"><span>Issued</span><span>${fmtDate(new Date())}</span></div>
-    </div><div class="foot">African Admission is an independent platform and not affiliated with any government entity.</div></div>`);
+    </div><div class="foot">African Admission is a division of VINK Group (Pty) Ltd, registration number 2018/079316/07. Not affiliated with any government entity.</div></div>`);
 }
